@@ -13,12 +13,10 @@ const images = [
   },
 ];
 
+const createImgEl = images.map(image => 
+  `<li><img src='${image.url}' alt= '${image.alt}' width = 300
+  height = 200> </img> </li>`).join('');
 
 const listEl = document.querySelector('.gallery');
-
-const createImgEl = images.map(image => {
-  let addEl = listEl.insertAdjacentHTML('beforeend', `<li><img src='${image.url}' alt= '${image.alt}' width = 300
-  height = 200> </img> </li>`);
-return addEl
-});
+listEl.insertAdjacentHTML("beforeend", createImgEl)
 

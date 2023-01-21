@@ -3,7 +3,7 @@ const refs = {
     spanEl: document.querySelector('#name-output'),
 };
 const onInputChange = (event) =>
-    refs.inpurEl.value != ''
+    refs.inpurEl.value === ''
         ? refs.spanEl.textContent = refs.inpurEl.value
         : refs.spanEl.textContent = "Anonymous";
 
